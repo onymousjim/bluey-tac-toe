@@ -13,8 +13,8 @@ COPY nginx.conf /etc/nginx/nginx.conf.template
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-# Expose port 8080 (Cloud Run default)
-EXPOSE 8080
+# Expose port 80
+EXPOSE 80
 
 # Start nginx with environment variable substitution
 CMD ["/start.sh"]
