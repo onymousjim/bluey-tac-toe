@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package files
+package-lock.json
+
+# Screenshots and temporary files
+*.png
+!bluey.png
+!bingo.png
+*screenshot*
+*.tmp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# MCP and test files
+mcp_*.js
+*_screenshot.js
+take_screenshot.js
+docker-screenshot.js
+CLAUDE.md
