@@ -8,11 +8,13 @@ COPY script.js /usr/share/nginx/html/
 COPY bluey.png /usr/share/nginx/html/
 COPY bingo.png /usr/share/nginx/html/
 
-# Copy custom nginx configuration template
+# Copy custom nginx configuration template and startup script
 COPY nginx.conf /etc/nginx/nginx.conf.template
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 # Expose port 8080 (Cloud Run default)
 EXPOSE 8080
 
 # Start nginx with environment variable substitution
-CMD envsubst '${PORT}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && nginx -g 'daemon off;'
+CMD ["/start.sh"]
