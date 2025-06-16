@@ -1,0 +1,24 @@
+# Git files
+.git
+.gitignore
+
+# Development files
+.claude/
+README.md
+
+# Test/demo images (not needed for app)
+image.png
+no-icons.png
+tiles.png
+
+# Node modules (if any)
+node_modules
+npm-debug.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode
+.idea
