@@ -1,7 +1,8 @@
 class BlueyTicTacToe {
     constructor() {
         this.board = Array(9).fill('');
-        this.currentPlayer = 'bluey';
+        this.firstPlayer = localStorage.getItem('firstPlayer') || 'bluey';
+        this.currentPlayer = this.firstPlayer;
         this.gameActive = true;
         this.scores = {
             bluey: parseInt(localStorage.getItem('blueyScore') || '0'),
@@ -117,7 +118,11 @@ class BlueyTicTacToe {
     
     resetGame() {
         this.board = Array(9).fill('');
-        this.currentPlayer = 'bluey';
+        
+        // Alternate who goes first each game
+        this.firstPlayer = this.firstPlayer === 'bluey' ? 'bingo' : 'bluey';
+        localStorage.setItem('firstPlayer', this.firstPlayer);
+        this.currentPlayer = this.firstPlayer;
         this.gameActive = true;
         
         const cells = document.querySelectorAll('.cell');
@@ -130,6 +135,8 @@ class BlueyTicTacToe {
     
     resetScores() {
         this.scores = { bluey: 0, bingo: 0 };
+        this.firstPlayer = 'bluey';
+        localStorage.setItem('firstPlayer', this.firstPlayer);
         this.saveScores();
         this.updateScoreDisplay();
         this.resetGame();
