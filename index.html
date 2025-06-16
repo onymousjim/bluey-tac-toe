@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluey-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Bluey-Tac-Toe</h1>
+            <div class="score-board">
+                <div class="player-score">
+                    <div class="player-avatar bluey"></div>
+                    <span class="player-name">Bluey</span>
+                    <span class="score" id="bluey-score">0</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-score">
+                    <div class="player-avatar bingo"></div>
+                    <span class="player-name">Bingo</span>
+                    <span class="score" id="bingo-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="game-status">
+                <p id="game-message">Bluey's turn!</p>
+            </div>
+            
+            <div class="game-board" id="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="reset-game" class="btn btn-primary">New Game</button>
+                <button id="reset-scores" class="btn btn-secondary">Reset Scores</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
