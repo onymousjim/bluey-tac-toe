@@ -8,10 +8,6 @@ yarn-error.log*
 package-lock.json
 
 # Screenshots and temporary files
-*.png
-!bluey.png
-!bingo.png
-*screenshot*
 *.tmp
 
 # IDE and editor files
@@ -34,9 +30,3 @@ Thumbs.db
 logs/
 *.log
 
-# MCP and test files
-mcp_*.js
-*_screenshot.js
-take_screenshot.js
-docker-screenshot.js
-CLAUDE.md

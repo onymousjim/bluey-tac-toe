@@ -68,7 +68,7 @@ body {
 
 .player-avatar.bluey {
     background: linear-gradient(135deg, #4A90E2, #7BB3F0);
-    background-image: url('bluey.png');
+    background-image: url('Players/bluey.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,7 +76,7 @@ body {
 
 .player-avatar.bingo {
     background: linear-gradient(135deg, #FF6B35, #FF8C42);
-    background-image: url('bingo.png');
+    background-image: url('Players/bingo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -147,7 +147,7 @@ body {
 
 
 .cell.bluey {
-    background: url('bluey.png'), linear-gradient(135deg, #4A90E2, #7BB3F0);
+    background: url('Players/bluey.png'), linear-gradient(135deg, #4A90E2, #7BB3F0);
     background-size: 60%, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
@@ -155,7 +155,7 @@ body {
 }
 
 .cell.bingo {
-    background: url('bingo.png'), linear-gradient(135deg, #FF6B35, #FF8C42);
+    background: url('Players/bingo.png'), linear-gradient(135deg, #FF6B35, #FF8C42);
     background-size: 60%, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
