@@ -11,6 +11,9 @@ package-lock.json
 Screenshots/
 *.tmp
 
+# Puppeteer test scripts
+PuppeteerScripts/
+
 # IDE and editor files
 .vscode/
 .idea/
