@@ -60,13 +60,13 @@ body {
     }
     
     .game-board {
-        gap: 3px !important;
-        padding: 5px !important;
-        margin-bottom: 6px !important;
+        gap: 2px !important;
+        padding: 4px !important;
+        margin-bottom: 4px !important;
     }
     
     .cell {
-        min-height: 45px !important;
+        min-height: 32px !important;
         font-size: 1.6rem !important;
     }
     
@@ -492,10 +492,10 @@ body {
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 18px;
     background: linear-gradient(135deg, #4A90E2 0%, #5BA0F2 100%);
-    padding: 12px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
 }
@@ -512,7 +512,7 @@ body {
     font-size: 2.5rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 3px solid transparent;
-    min-height: 70px;
+    min-height: 55px;
     position: relative;
     overflow: hidden;
 }
@@ -700,12 +700,12 @@ body {
     }
     
     .game-container {
-        padding: 12px;
-        margin: 3px;
+        padding: 10px;
+        margin: 2px;
     }
     
     .game-header {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
     
     .game-header h1 {
@@ -745,14 +745,14 @@ body {
     }
     
     .game-board {
-        gap: 6px;
-        padding: 10px;
-        margin-bottom: 15px;
+        gap: 5px;
+        padding: 8px;
+        margin-bottom: 12px;
     }
     
     .cell {
         font-size: 2rem;
-        min-height: 55px;
+        min-height: 42px;
         border-radius: 8px;
     }
     
@@ -826,8 +826,8 @@ body {
     }
     
     .game-container {
-        padding: 8px;
-        margin: 2px;
+        padding: 6px;
+        margin: 1px;
     }
     
     .game-header h1 {
@@ -836,7 +836,7 @@ body {
     }
     
     .game-header {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
     
     .score-board {
@@ -854,14 +854,14 @@ body {
     }
     
     .game-board {
-        gap: 4px;
-        padding: 6px;
-        margin-bottom: 8px;
+        gap: 3px;
+        padding: 5px;
+        margin-bottom: 6px;
     }
     
     .cell {
         font-size: 1.8rem;
-        min-height: 50px;
+        min-height: 36px;
         border-radius: 6px;
     }
     
