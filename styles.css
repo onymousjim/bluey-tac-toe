@@ -27,11 +27,10 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 32px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 20px;
     max-width: 500px;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: containerFloat 6s ease-in-out infinite;
 }
 
 .game-container:hover {
@@ -39,20 +38,15 @@ body {
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes containerFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
 .game-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .game-header h1 {
     color: #FF6B35;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     animation: titlePulse 3s ease-in-out infinite;
     transition: transform 0.3s ease;
@@ -74,7 +68,7 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
     border-radius: 15px;
-    padding: 15px;
+    padding: 12px;
     transition: all 0.3s ease;
     box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -92,14 +86,14 @@ body {
 }
 
 .player-avatar {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     border: 3px solid #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: white;
     transition: all 0.3s ease;
@@ -153,7 +147,7 @@ body {
 
 .game-status {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #game-message {
@@ -176,24 +170,18 @@ body {
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 8px;
+    margin-bottom: 20px;
     background: linear-gradient(135deg, #4A90E2 0%, #5BA0F2 100%);
-    padding: 15px;
+    padding: 12px;
     border-radius: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
-    animation: boardPulse 5s ease-in-out infinite;
 }
 
 .game-board:hover {
     transform: scale(1.02);
     box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
-}
-
-@keyframes boardPulse {
-    0%, 100% { box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3); }
-    50% { box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5); }
 }
 
 .cell {
@@ -204,10 +192,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 3px solid transparent;
-    min-height: 80px;
+    min-height: 70px;
     position: relative;
     overflow: hidden;
 }
@@ -348,18 +336,28 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     .game-container {
-        padding: 20px;
-        margin: 10px;
+        padding: 15px;
+        margin: 5px;
+    }
+    
+    .game-header {
+        margin-bottom: 15px;
     }
     
     .game-header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
     }
     
     .score-board {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 10px;
     }
     
     .player-score {
@@ -367,38 +365,104 @@ body {
         gap: 10px;
     }
     
+    .player-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
     .vs {
         order: -1;
+        font-size: 1rem;
     }
     
-    .cell {
-        font-size: 2.5rem;
-        min-height: 70px;
+    .game-status {
+        margin-bottom: 10px;
     }
     
-    .game-controls {
-        flex-direction: column;
+    #game-message {
+        font-size: 1.1rem;
+        padding: 8px;
     }
     
-    .btn {
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .game-header h1 {
-        font-size: 1.8rem;
+    .game-board {
+        gap: 6px;
+        padding: 10px;
+        margin-bottom: 15px;
     }
     
     .cell {
         font-size: 2rem;
-        min-height: 60px;
+        min-height: 55px;
+        border-radius: 8px;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra mobile optimization for small phones like Pixel 9 Pro */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .game-container {
+        padding: 12px;
+        margin: 2px;
+    }
+    
+    .game-header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    
+    .game-header {
+        margin-bottom: 12px;
+    }
+    
+    .score-board {
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .game-status {
+        margin-bottom: 8px;
+    }
+    
+    #game-message {
+        font-size: 1rem;
+        padding: 6px;
+    }
+    
+    .game-board {
+        gap: 5px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .cell {
+        font-size: 1.8rem;
+        min-height: 50px;
+        border-radius: 6px;
     }
     
     .player-avatar {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 10px;
+        font-size: 0.85rem;
     }
 }
