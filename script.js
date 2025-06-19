@@ -170,9 +170,8 @@ class LilyTicTacToe {
         document.getElementById('game-container').style.display = 'block';
         
         this.setupGameWithSelectedCharacters();
-        this.gameActive = true;
+        this.resetGame(); // Ensure clean board when starting/returning to game
         this.bindGameEvents();
-        this.updateGameDisplay();
     }
     
     setupGameWithSelectedCharacters() {
