@@ -20,7 +20,7 @@ body {
 @media (max-height: 700px) {
     body {
         align-items: flex-start;
-        padding: 10px;
+        padding: 5px 10px 10px 10px;
         min-height: 100vh;
     }
 }
@@ -28,7 +28,7 @@ body {
 /* Extra optimization for very short screens */
 @media (max-height: 600px) {
     body {
-        padding: 5px;
+        padding: 2px 5px 5px 5px;
     }
     
     .game-container {
@@ -654,7 +654,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 8px;
+        padding: 4px 8px 8px 8px;
     }
     
     .character-selection-container {
@@ -771,7 +771,7 @@ body {
 /* Extra mobile optimization for small phones like Pixel 9 Pro */
 @media (max-width: 480px) {
     body {
-        padding: 5px;
+        padding: 2px 5px 5px 5px;
     }
     
     .character-selection-container {
