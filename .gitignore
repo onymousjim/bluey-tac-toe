@@ -8,6 +8,7 @@ yarn-error.log*
 package-lock.json
 
 # Screenshots and temporary files
+Screenshots/
 *.tmp
 
 # IDE and editor files
