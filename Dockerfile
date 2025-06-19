@@ -1,6 +1,11 @@
 # Use nginx alpine image for lightweight static file serving
 FROM nginx:alpine
 
+# Add build timestamp to bust cache
+ARG BUILD_DATE
+ENV BUILD_DATE=${BUILD_DATE}
+RUN echo "Build date: ${BUILD_DATE}"
+
 # Copy static files to nginx html directory
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/

@@ -5,6 +5,12 @@
 # Development files
 .claude/
 README.md
+CLAUDE.md
+Screenshots/
+*.js
+!script.js
+package.json
+package-lock.json
 
 # Test/demo images (not needed for app)
 image.png
