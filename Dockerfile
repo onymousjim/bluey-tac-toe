@@ -5,8 +5,7 @@ FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
-COPY bluey.png /usr/share/nginx/html/
-COPY bingo.png /usr/share/nginx/html/
+COPY Players/ /usr/share/nginx/html/Players/
 
 # Copy custom nginx configuration template and startup script
 COPY nginx.conf /etc/nginx/nginx.conf.template
