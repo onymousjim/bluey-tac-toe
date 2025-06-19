@@ -13,27 +13,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
+    <!-- Character Selection Screen -->
+    <div class="character-selection-container" id="character-selection">
+        <header class="character-header">
+            <h1>Choose Your Characters</h1>
+            <p class="character-subtitle" id="selection-prompt">Player 1, select your character</p>
+        </header>
+        
+        <main class="character-main">
+            <div class="character-grid" id="character-grid">
+                <!-- Characters will be dynamically loaded here -->
+            </div>
+            
+            <div class="selection-status" id="selection-status">
+                <div class="selected-players">
+                    <div class="selected-player" id="player1-selection" style="display: none;">
+                        <div class="selected-avatar" id="player1-avatar"></div>
+                        <span class="selected-name" id="player1-name">Player 1</span>
+                    </div>
+                    <div class="vs-selected" id="vs-selected" style="display: none;">VS</div>
+                    <div class="selected-player" id="player2-selection" style="display: none;">
+                        <div class="selected-avatar" id="player2-avatar"></div>
+                        <span class="selected-name" id="player2-name">Player 2</span>
+                    </div>
+                </div>
+                
+                <div class="character-controls">
+                    <button id="back-selection" class="btn btn-secondary" style="display: none;">Back</button>
+                    <button id="start-game" class="btn btn-primary" style="display: none;">Start Game</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-container" id="game-container" style="display: none;">
         <header class="game-header">
             <h1>Lily-Tac-Toe</h1>
             <div class="score-board">
                 <div class="player-score">
-                    <div class="player-avatar bluey"></div>
-                    <span class="player-name">Bluey</span>
-                    <span class="score" id="bluey-score">0</span>
+                    <div class="player-avatar" id="game-player1-avatar"></div>
+                    <span class="player-name" id="game-player1-name">Player 1</span>
+                    <span class="score" id="player1-score">0</span>
                 </div>
                 <div class="vs">VS</div>
                 <div class="player-score">
-                    <div class="player-avatar bingo"></div>
-                    <span class="player-name">Bingo</span>
-                    <span class="score" id="bingo-score">0</span>
+                    <div class="player-avatar" id="game-player2-avatar"></div>
+                    <span class="player-name" id="game-player2-name">Player 2</span>
+                    <span class="score" id="player2-score">0</span>
                 </div>
             </div>
         </header>
 
         <main class="game-main">
             <div class="game-status">
-                <p id="game-message">Bluey's turn!</p>
+                <p id="game-message">Player 1's turn!</p>
             </div>
             
             <div class="game-board" id="game-board">
@@ -51,6 +85,7 @@
             <div class="game-controls">
                 <button id="reset-game" class="btn btn-primary">New Game</button>
                 <button id="reset-scores" class="btn btn-secondary">Reset Scores</button>
+                <button id="change-characters" class="btn btn-secondary">Change Characters</button>
             </div>
         </main>
     </div>
