@@ -35,7 +35,7 @@ class LilyTicTacToe {
         // Since we can't directly read the filesystem in browser,
         // we'll use a predefined list that matches the Players directory
         // This could be made dynamic with a server endpoint in the future
-        const characterFiles = ['bluey.png', 'bingo.png'];
+        const characterFiles = ['bluey.png', 'bingo.png', 'muffin.png'];
         
         this.availableCharacters = characterFiles.map(filename => {
             const name = filename.replace('.png', '');
