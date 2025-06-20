@@ -48,6 +48,18 @@ class LilyTicTacToe {
         });
         
         this.renderCharacterGrid();
+        this.setupInitialSelectionState();
+    }
+    
+    setupInitialSelectionState() {
+        // Ensure consistent initial state same as returnToCharacterSelection
+        document.getElementById('selection-prompt').textContent = 'Player 1, select your character';
+        document.getElementById('player1-selection').style.display = 'none';
+        document.getElementById('player2-selection').style.display = 'none';
+        document.getElementById('vs-selected').style.display = 'none';
+        document.getElementById('back-selection').style.display = 'none';
+        document.getElementById('start-game').style.display = 'none';
+        document.getElementById('character-grid').style.display = 'block';
     }
     
     renderCharacterGrid() {
@@ -357,15 +369,9 @@ class LilyTicTacToe {
         // Reset selection state
         this.selectedCharacters = { player1: null, player2: null };
         this.selectionStep = 'player1';
-        document.getElementById('selection-prompt').textContent = 'Player 1, select your character';
-        document.getElementById('player1-selection').style.display = 'none';
-        document.getElementById('player2-selection').style.display = 'none';
-        document.getElementById('vs-selected').style.display = 'none';
-        document.getElementById('back-selection').style.display = 'none';
-        document.getElementById('start-game').style.display = 'none';
-        document.getElementById('character-grid').style.display = 'block'; // Show grid again
         
         this.renderCharacterGrid();
+        this.setupInitialSelectionState();
     }
 }
 
