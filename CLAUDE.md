@@ -5,6 +5,7 @@
 - All changes should be responsive, and display properly on a cell phone screen, tablet, and computer monitor
 - IMPORTANT never git commit or push to github as part of your plan
 - If the Screenshots directory doesn't exist, create it.  Make sure you're putting all screenshots in the Screenshots directory.  
+- If the PuppeteerScripts directory doesn't exist, create it.  Make sure you're putting all screenshots in the PuppeteerScripts directory.  
 - Every time you start a new task, clear out the screenshots directory before starting
 
 ## Communication Shortcuts

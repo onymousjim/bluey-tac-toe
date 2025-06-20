@@ -8,11 +8,11 @@ yarn-error.log*
 package-lock.json
 
 # Screenshots and temporary files
-Screenshots/
+Screenshots/*
 *.tmp
 
 # Puppeteer test scripts
-PuppeteerScripts/
+PuppeteerScripts/*
 
 # IDE and editor files
 .vscode/

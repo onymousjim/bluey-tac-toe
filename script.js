@@ -99,9 +99,11 @@ class LilyTicTacToe {
             character.available = false;
             this.showPlayerSelection(2, character);
             this.selectionStep = 'complete';
-            document.getElementById('selection-prompt').textContent = 'Ready to play!';
+            
+            // Hide character grid and show ready state
+            document.getElementById('character-grid').style.display = 'none';
+            document.getElementById('selection-prompt').textContent = 'Ready to start!';
             document.getElementById('start-game').style.display = 'inline-block';
-            this.renderCharacterGrid();
         }
     }
     
@@ -149,6 +151,7 @@ class LilyTicTacToe {
             document.getElementById('player1-selection').style.display = 'none';
             document.getElementById('vs-selected').style.display = 'none';
             document.getElementById('back-selection').style.display = 'none';
+            document.getElementById('character-grid').style.display = 'block';
             this.renderCharacterGrid();
         } else if (this.selectionStep === 'complete') {
             // Go back to player 2 selection
@@ -161,6 +164,7 @@ class LilyTicTacToe {
             document.getElementById('selection-prompt').textContent = 'Player 2, select your character';
             document.getElementById('player2-selection').style.display = 'none';
             document.getElementById('start-game').style.display = 'none';
+            document.getElementById('character-grid').style.display = 'block';
             this.renderCharacterGrid();
         }
     }
@@ -359,6 +363,7 @@ class LilyTicTacToe {
         document.getElementById('vs-selected').style.display = 'none';
         document.getElementById('back-selection').style.display = 'none';
         document.getElementById('start-game').style.display = 'none';
+        document.getElementById('character-grid').style.display = 'block'; // Show grid again
         
         this.renderCharacterGrid();
     }
